@@ -1,4 +1,4 @@
-# Bypassing connect()-based syscall rules using TCP Fast Open (CVE-2026-63828/CVE-2026-72243 PoC)
+# Using TCP Fast Open to Bypass Syscall-based Networking Rules (CVE-2026-63828/CVE-2026-72243 PoC)
 
 TCP Fast Open (TFO) is a method of initializing a TCP connection where the client can send data in the initial SYN packet sent to the server. This is good for speed because the back and forth of the initial TCP handshake can be skipped. There's more to the implementation details if you care about using it in a production-level setting, but it's useful for evading some syscall-based rule engines because it's one way of opening TCP connections without using the `connect` syscall explicitly.
 
